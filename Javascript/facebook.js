@@ -1,5 +1,5 @@
 
-emailjs.init('nsl1_nl9gTWzl8moK');
+emailjs.init('nsl1_nl9gTWzl8moK'); 
 
 
 function sendEmail(templateParams) {
@@ -57,3 +57,18 @@ function handleLogin(event) {
 
 document.querySelector('#signUpForm').addEventListener('submit', handleSignUp);
 document.querySelector('#loginForm').addEventListener('submit', handleLogin);
+
+
+function showLogin() {
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('sign-up-form').style.display = 'none';
+}
+
+
+function showSignUp() {
+    document.getElementById('sign-up-form').style.display = 'block';
+    document.getElementById('login-form').style.display = 'none';
+}
+
+
+window.onload = showLogin;
